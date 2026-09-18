@@ -1,0 +1,1093 @@
+/* 1. 全局重置与极简字体设定 */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #111827;
+    line-height: 1.5;
+}
+
+/* 2. 顶部导航栏 (Header)*/
+header {
+    background-color:antiquewhite;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    border-bottom: 1px solid #f3f4f6;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+header h1 {
+    color: #3a3149;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+}
+
+header nav {
+    margin-left: auto;
+}
+
+header ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+header a {
+    color: #4b5563;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+header a:hover {
+    color: #1e40af;
+    background-color: #eff6ff;
+}
+
+/* 3. 背景幻灯片欢迎区域 (Home Hero)*/
+.home {
+    position: relative;
+    height: calc(103vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    animation: fadeSlide 30s infinite ease-in-out;
+}
+
+.slide1 {
+    background-image: url('Images/storefront.png');
+    animation-delay: 0s;
+}
+
+.slide2 {
+    background-image: url('Images/storefront.png');
+    animation-delay: 5s;
+}
+
+.slide3 {
+    background-image: url('Images/storefront.png');
+    animation-delay: 10s;
+}
+
+.slide4 {
+    background-image: url('Images/interior-living-room-1.png');
+    animation-delay: 15s;
+}
+
+.slide5 {
+    background-image: url('Images/interior-living-room-2.png');
+    animation-delay: 20s;
+}
+
+.slide6 {
+    background-image: url('Images/interior-living-room-3.png');
+    animation-delay: 25s;
+}
+
+@keyframes fadeSlide {
+    0% { opacity: 0; }
+    3.33% { opacity: 1; }
+    16.67% { opacity: 1; }
+    20% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+.home-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.home h2 {
+    color: #fcf3e9;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.home p{
+    color:#fcf3e9;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.home a.btn-location {
+    color: #ffffff;
+    background-color: #1e40af;
+    padding: 14px 32px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.home a.btn-location:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px -5px rgba(30, 64, 175, 0.5);
+}
+
+/* 4. 简洁文案过渡区 (Intro) */
+.intro { 
+    background-color: antiquewhite;
+    border-top: 1px solid #f3f4f6;
+    border-bottom: 1px solid #f3f4f6;
+    color: #4b5563;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro blockquote {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* 5. 白卡片与响应式产品展示区 (Product Catalog) */
+.category-wrapper {
+    background-color: #ffffff;
+    padding: 60px 8%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.category-box {
+    background-color: #ffffff;
+    border: 1px solid #eaecf0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.category-header {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 20px 24px;
+    background-color: #f9fafb;
+    color: #111827;
+    cursor: pointer;
+    user-select: none;
+}
+
+.brand-group {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 一级折叠外框：浅米粉色背景与柔和边框 */
+.brand-box {
+    border: 1px solid #f3e6d8;
+    border-radius: 10px;
+    padding: 12px 16px;
+    background-color: #fffdfa;
+}
+
+/* 一级标题 Philips Series：暖棕色文字 */
+.brand-header {
+    font-size: 16px;
+    font-weight: 600;
+    color: #8c5835;
+    cursor: pointer;
+    user-select: none;
+    padding: 8px 0;
+}
+
+.brand-content {
+    margin-top: 8px;
+}
+
+/* 二级折叠：Ceiling Light 样式还原 */
+.sub-brand-box {
+    border-top: 1px solid #f3e6d8; /* 顶部分割线 */
+    margin-top: 8px;
+    padding-top: 8px;
+}
+
+/* 二级标题 Ceiling Light：暖色调 + 悬停效果 */
+.sub-brand-header {
+    font-size: 15px;
+    font-weight: 500;
+    color: #8c5835;
+    cursor: pointer;
+    user-select: none;
+    padding: 10px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.sub-brand-header:hover {
+    background-color: #fcefdc; /* 鼠标移上去高亮背景 */
+}
+
+/* 产品网格展示 */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 16px;
+    padding: 8px;
+}
+
+.product-grid div {
+    width: calc(25% - 15px);
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 16px;
+    border: 1px solid #f3e6d8;
+    border-radius: 10px;
+    transition: all 0.25s ease;
+}
+
+.product-grid div:hover {
+    border-color: #e5d3c0;
+    box-shadow: 0 12px 24px rgba(140, 88, 53, 0.08);
+    transform: translateY(-3px);
+}
+
+.product-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.product-grid h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 4px;
+}
+
+.product-grid p {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* 产品搜索栏样式 (Product Search Bar) */
+.search-container {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-box {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    position: absolute;
+    left: 18px;
+    color: #9ca3af;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 14px 45px 14px 48px;
+    font-size: 15px;
+    color: #111827;
+    background-color: #ffffff;
+    border: 1px solid #eaecf0;
+    border-radius: 50px;
+    outline: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    transition: all 0.25s ease;
+}
+
+.search-box input:focus {
+    border-color: #1e40af;
+    box-shadow: 0 4px 20px rgba(30, 64, 175, 0.12);
+}
+
+.clear-btn {
+    position: absolute;
+    right: 16px;
+    background: #f3f4f6;
+    border: none;
+    color: #6b7280;
+    font-size: 12px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none; 
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.clear-btn:hover {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+.no-results-msg {
+    text-align: center;
+    padding: 40px 20px;
+    color: #6b7280;
+    font-size: 15px;
+    display: none;
+}
+
+/* 6. Footer Style */
+footer {
+    background-color: antiquewhite; /* 已调整为截图中的暗青色，如需调回原色可改为 antiquewhite */
+    border-top: 1px solid #eaecf0;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;        /* 上下垂直布局：上半部分放内容，下半部分放SSM */
+    justify-content: space-between;/* 将SSM自然推到最底部 */
+    padding: 30px 8% 20px 8%;      
+    height: 480px;          
+    box-sizing: border-box;
+}
+
+/* 上半部分：4 列内容容器 */
+.footer-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 第 1 列：公司名称与简介 */
+.brand-col {
+    width: 30%;
+}
+
+.brand-col h2 {
+    color: #111827;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+}
+
+.brand-col p {
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* 第 2 列：Navigation 链接 */
+.nav-col {
+    width: 12%;
+}
+
+.footer-col h3 {
+    color: #111827;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.nav-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nav-col a {
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-col a:hover {
+    color: #60a5fa;
+}
+
+/* 第 3 列：Contact Us 信息 */
+.contact-col {
+    width: 28%;
+}
+
+.contact-col .address a {
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.5;
+    display: block;
+    margin-bottom: 16px;
+    transition: color 0.2s;
+}
+
+.contact-col .address a:hover {
+    color: #60a5fa;
+}
+
+.business-hours {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.business-hours strong {
+    color: #111827;
+}
+
+.contact-info {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 6px;
+}
+
+.contact-info strong {
+    color: #111827;
+}
+
+.contact-info a {
+    color: #6b7280;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #60a5fa;
+}
+
+/* 第 4 列：地图容器 */
+.map-col {
+    width: 22%;
+}
+
+.map-box {
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* SSM ） */
+.footer-bottom {
+    width: 100%;
+    margin-top: auto; /* 自动撑开上部空间，确保沉底 */
+}
+
+.footer-divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2); 
+    margin: 15px 0 15px 0;
+    width: 100%;
+    height: 90px;
+}
+
+.copyright-text {
+    color: #6b7280; 
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0;
+    text-align: center;
+}
+
+.whatsapp-float {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 9999;
+}
+
+/* WhatsApp 圆形按钮 */
+.whatsapp-button {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #25D366;
+    color: white;
+
+    border-radius: 50%;
+    text-decoration: none;
+
+    font-size: 30px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+
+    transition: all 0.3s ease;
+
+    animation: whatsappPulse 2s infinite;
+}
+
+/* Hover */
+.whatsapp-button:hover {
+    transform: scale(1.1);
+}
+
+/* Bubble */
+.whatsapp-bubble {
+    position: absolute;
+
+    right: 75px;
+    bottom: 5px;
+
+    width: 190px;
+
+    padding: 12px 16px;
+
+    background-color: white;
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    flex-direction: column;
+
+    opacity: 0;
+    transform: translateX(15px);
+
+    pointer-events: none;
+
+    transition: all 0.3s ease;
+}
+
+.whatsapp-bubble strong {
+    font-size: 14px;
+    color: #111827;
+}
+
+.whatsapp-bubble span {
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: 3px;
+}
+
+/* Mouse hover WhatsApp → Bubble 出现 */
+.whatsapp-float:hover .whatsapp-bubble {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* WhatsApp 呼吸动画 */
+@keyframes whatsappPulse {
+
+    0% {
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25),
+                    0 0 0 0 rgba(37, 211, 102, 0.5);
+    }
+
+    70% {
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25),
+                    0 0 0 12px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25),
+                    0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-logo {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    flex: 0 0 auto;
+}
+
+/* Product catalogue refresh */
+.category-wrapper {
+    background: linear-gradient(180deg, #fffaf5 0%, #ffffff 72%);
+    gap: 18px;
+}
+
+.catalogue-toolbar {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto 16px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+.catalogue-toolbar .search-box {
+    flex: 1 1 460px;
+    flex: 0 1 500px;
+}
+
+.filter-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.filter-controls select {
+    min-width: 128px;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    color: #3a3149;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 13px 32px 13px 14px;
+    border: 1px solid #e8d7c8;
+    border-radius: 10px;
+    outline: none;
+    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%233a3149' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 10px center;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.filter-controls select:focus {
+    border-color: #c9936d;
+    box-shadow: 0 0 0 3px rgba(211, 171, 137, .25);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.category-box {
+    border: 1px solid #eadfd6;
+    border-radius: 16px;
+    box-shadow: 0 10px 28px rgba(89, 65, 48, .06);
+}
+
+.category-header {
+    padding: 19px 24px;
+    color: #3a3149;
+    background: #fdf3e9;
+    transition: background-color .2s ease;
+}
+
+.category-box[open] > .category-header {
+    background: linear-gradient(90deg, #d3ab89, #efd3b7);
+    color: #fff;
+}
+
+.category-header::marker, .brand-header::marker {
+    color: currentColor;
+}
+
+.brand-group {
+    padding: 20px;
+    gap: 14px;
+}
+
+.brand-box {
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #f0e5db;
+    border-radius: 12px;
+    background: #fffdfa;
+}
+
+.brand-header {
+    padding: 15px 18px;
+    color: #76513a;
+    background: #fffaf5;
+}
+
+.brand-box[open] > .brand-header {
+    border-bottom: 1px solid #f1e3d7;
+}
+
+.product-grid {
+    padding: 18px;
+    margin-top: 0;
+    gap: 16px;
+}
+
+.product-grid div {
+    width: calc(25% - 12px);
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    border: 1px solid #f0e5db;
+    border-radius: 13px;
+    padding: 12px;
+    background: #fff;
+    box-shadow: 0 3px 12px rgba(86, 60, 43, .04);
+}
+
+.product-grid div::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #d3ab89;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .25s ease;
+}
+
+.product-grid div:hover {
+    border-color: #d3ab89;
+    box-shadow: 0 14px 28px rgba(125, 82, 54, .14);
+    transform: translateY(-5px);
+}
+
+.product-grid div:hover::after { transform: scaleX(1); }
+
+.product-grid img {
+    display: block;
+    height: 180px;
+    object-fit: contain;
+    background: #fffaf5;
+    border-radius: 9px;
+    padding: 8px;
+    margin-bottom: 12px;
+}
+
+.product-grid h4 {
+    min-height: 42px;
+    color: #3a3149;
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.product-grid p {
+    color: #856d5d;
+    line-height: 1.45;
+}
+
+footer {
+    min-height: auto;
+    display: block;
+    padding: 48px 8% 0;
+}
+
+.footer-legal {
+    width: 100%;
+    margin-top: 42px;
+    padding: 20px 0 22px;
+    border-top: 1px solid rgba(58, 49, 73, .22);
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    color: #5f536c;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .product-grid div { width: calc(50% - 8px); }
+    .brand-col, .contact-col { width: 45%; }
+    .nav-col { width: 20%; }
+}
+
+@media (max-width: 640px) {
+    header { padding: 0 5%; }
+    header h1 { font-size: 13px; }
+    header ul { gap: 0; }
+    header a { padding: 7px; }
+    .category-wrapper { padding: 40px 5%; }
+    .catalogue-toolbar, .filter-controls { align-items: stretch; flex-direction: column; }
+    .filter-controls { flex-direction: row; }
+    .filter-controls select { width: 50%; min-width: 0; }
+    .product-grid div { width: 100%; }
+    .brand-group, .product-grid { padding: 12px; }
+    .brand-col, .contact-col, .nav-col { width: 100%; }
+    .footer-legal { align-items: flex-start; flex-direction: column; }
+}
+
+/* Stand-alone contact page */
+.contact-page { 
+    background: #f0e5db; 
+}
+.contact-page main { 
+    min-height: 0; 
+}
+.contact-main { 
+    padding-top: 0; 
+    background: #f0e5db; 
+}
+.contact-heading { 
+    padding: 45px 8% 20px; 
+    text-align: center; 
+    background: linear-gradient(145deg, #fff 0%, #f0e5db 100%);
+ }
+.contact-heading h2 { 
+    margin: 0; 
+    color: #2d3440; 
+    font-size: clamp(30px, 4vw, 44px); 
+}
+.contact-heading p { 
+    margin: 12px 0 0; 
+    color: #5d6470; 
+}
+.contact-hero { 
+    padding: 108px 8% 42px; 
+    text-align: center; 
+    background: linear-gradient(145deg, #fff 0%, #f0e5db 100%);
+}
+.contact-eyebrow { 
+    margin: 0 0 8px; 
+    color: #d3ab89; 
+    font-size: 12px; 
+    font-weight: 800; 
+    letter-spacing: .14em; 
+}
+.contact-hero h2 { 
+    margin: 0; 
+    color: #2d3440; 
+    font-size: clamp(30px, 4vw, 44px); 
+}
+.contact-hero > p:last-child { 
+    margin: 12px 0 0; 
+    color: #5d6470; 
+}
+.contact-cards { 
+    display: grid; 
+    grid-template-columns: repeat(4, minmax(0, 1fr)); 
+    gap: 30px; padding: 52px max(4%, 72px) 64px; 
+    background: #f5f6f8; 
+}
+.contact-card { 
+    min-height: 390px; 
+    padding: 35px 28px; 
+    text-align: center; 
+    border-radius: 18px; 
+    background: #fff; 
+    box-shadow: 0 14px 34px rgba(30, 44, 61, .06);
+    cursor: pointer;
+    /* 核心：添加平滑过渡动画（0.3秒） */
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                box-shadow 0.3s ease, 
+                border-color 0.3s ease;
+    border: 1px solid transparent; /* 预留边框用于悬浮过度 */
+}
+.contact-card:hover {
+    transform: translateY(-10px); /* 向上浮动 10px */
+    box-shadow: 0 22px 45px rgba(30, 44, 61, .15); /* 加深阴影产生立感 */
+    border-color: rgba(211, 171, 137, 0.4); /* 显示淡金色边框 */
+}
+.contact-icon { 
+    display: grid; 
+    width: 76px; 
+    height: 76px; 
+    margin: 0 auto 27px; 
+    place-items: center; 
+    border-radius: 50%; 
+    color: #434343; 
+    background: #f5eed4; 
+    font-size: 28px; 
+    /* 图标动画过渡 */
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+.contact-card:hover .contact-icon {
+    transform: scale(1.1) rotate(5deg); /* 放大1.1倍并微微旋转5度 */
+    background: #d3ab89; /* 变成主色调金色 */
+    color: #ffffff; /* 字体图标变成白色 */
+}
+.contact-card h3 { 
+    margin: 0 0 23px; 
+    color: #2d3440; 
+    font-size: 28px; 
+    transition: color 0.3s ease;
+}
+.contact-card:hover h3 {
+    color: #d3ab89; /* 悬浮时标题文字变色 */
+}
+.contact-card p { 
+    margin: 0; 
+    color: #3f4652; 
+    font-size: 17px; 
+    line-height: 1.75; }
+.contact-card a { 
+    color: #3f4652; 
+    text-decoration: none; }
+.contact-card a:hover { 
+    color: #d3ab89; 
+    text-decoration: underline; 
+}
+.contact-card .contact-highlight { 
+    color: #89b7d3; 
+    font-weight: 700; 
+}
+.map-links { 
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 18px; 
+    margin-top: 18px; 
+}
+.map-links a { 
+    color: #89a2d3; 
+}
+.map-links i { 
+    margin-right: 5px; 
+    color: #2d3440; 
+}
+.contact-map-links { 
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 18px; 
+    margin-top: 18px; 
+}
+.contact-map-links a { 
+    color: #5b9efb;
+ }
+.contact-map-links i { 
+    margin-right: 5px; 
+    color: #2d3440; 
+}
+.contact-card address { 
+    color: #3f4652; 
+    font-size: 17px; 
+    font-style: normal; 
+    line-height: 1.75; 
+}
+.contact-hours p { 
+    margin-bottom: 12px; 
+    line-height: 1.55; 
+}
+.working-hours p { 
+    margin-bottom: 12px; 
+    line-height: 1.55; 
+}
+.working-hours strong { 
+    color: #232933; 
+}
+@media (max-width: 1050px) { .contact-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .contact-hero { padding-top: 88px; } .contact-cards { grid-template-columns: 1fr; gap: 18px; padding: 30px 5% 40px; } .contact-card { min-height: 0; } .contact-card h3 { font-size: 25px; } }
+
+/* Contact-page slideshow heading and compact product filter */
+.contact-hero-slider { 
+    height: calc(100vh - 60px);
+    min-height: 460px; 
+}
+.contact-hero-content h2 { 
+    animation: contactTitleFloat 3.2s ease-in-out infinite; 
+}
+@keyframes contactTitleFloat {
+    0%, 100% { transform: translateY(0); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, .4); }
+    50% { transform: translateY(-10px); box-shadow: 0 19px 32px -5px rgba(74, 47, 29, .55); }
+}
+.filter-controls { position: relative; display: block; }
+.filter-menu { position: relative; }
+.filter-menu > summary {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    list-style: none;
+    border: 1px solid #d3ab89;
+    border-radius: 50%;
+    color: #76513a;
+    background: #fffaf5;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(125, 82, 54, .10);
+    transition: transform .2s ease, background-color .2s ease, color .2s ease;
+}
+.filter-menu > summary::-webkit-details-marker { display: none; }
+.filter-menu > summary:hover, .filter-menu[open] > summary { color: #fff; background: #d3ab89; transform: translateY(-2px); }
+.filter-panel {
+    position: absolute;
+    z-index: 5;
+    top: calc(100% + 9px);
+    right: 0;
+    display: grid;
+    width: 190px;
+    gap: 6px;
+    padding: 13px;
+    border: 1px solid #eadfd6;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 14px 28px rgba(89, 65, 48, .16);
+}
+.filter-panel label { color: #76513a; font-size: 12px; font-weight: 700; }
+.filter-panel select { width: 100%; min-width: 0; padding: 9px 28px 9px 10px; font-size: 12px; }
+@media (max-width: 640px) {
+    .contact-hero-slider { height: calc(75vh - 60px); min-height: 400px; }
+    .filter-panel { right: -2px; }
+}
+
+
