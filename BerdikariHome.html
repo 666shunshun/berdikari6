@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syarikat Perniagaan Elektrik Berdikari Sdn Bhd</title>
+    <link rel="stylesheet" href="StyleT1.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<!-- WhatsApp Floating Button -->
+<div class="whatsapp-float">
+
+    <div class="whatsapp-bubble">
+        <strong>Need Help?</strong>
+        <span>Chat with us on WhatsApp</span>
+    </div>
+
+    <a href="https://wa.me/60173669886" 
+       target="_blank" 
+       class="whatsapp-button">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+</div>
+
+<body>
+    <!-- 顶部固定导航栏 -->
+    <header>
+        <button class="menu">&#9776;</button>
+        <div class="header-brand">
+            <img src="Images/berdikari.logo.png" alt="Berdikari logo" class="header-logo">
+            <h1>Syarikat Perniagaan Elektrik Berdikari Sdn Bhd</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <!-- 1. 修改 About 为 Products -->
+                <li><a href="#Products">Products</a></li>
+                <li><a href="T1.contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 主页 Hero 欢迎区（占据全屏高度） -->
+        <section class="home" id="Home">
+            <div class="slideshow">
+                <div class="slide slide1"></div>
+                <div class="slide slide2"></div>
+                <div class="slide slide3"></div>
+                <div class="slide slide4"></div>
+                <div class="slide slide5"></div>
+                <div class="slide slide6"></div>
+            </div>
+
+            <div class="home-content">
+                <h2>Welcome to Berdikari</h2>
+                <p>Founded in 1990 by Mr. Yee Kok Kong, Syarikat Perniagaan Elektrik Berdikari Sdn Bhd was built on courage <br>
+                     and a spirit of self-reliance qualities that inspired the name "Berdikari", a brand trusted to this day.</p>
+                <!-- <a href="https://maps.app.goo.gl/Roun6vBh8U3yHfnV7" class="btn-location" target="_blank">Get our location</a> -->
+            </div>
+        </section>
+
+        <!-- 简介过渡区 -->
+        <section class="intro">
+            <blockquote>Our company since 1990</blockquote>
+        </section>
+
+        <!-- 现代白卡片折叠选单区 (加上 id="Products") -->
+        <section class="category-wrapper" id="Products">
+
+            <div class="catalogue-toolbar">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="productSearchInput" placeholder="Search products, brands, or categories..." onkeyup="filterProducts()">
+                    <button type="button" class="clear-btn" id="clearSearchBtn" onclick="clearSearch()">✕</button>
+                </div>
+                <div class="filter-controls">
+                    <details class="filter-menu">
+                        <summary aria-label="Open product filters"><i class="fa-solid fa-sliders"></i><span class="sr-only">Open product filters</span></summary>
+                        <div class="filter-panel" aria-label="Product filters">
+                            <label for="sortSelect">Sort by</label>
+                            <select id="sortSelect" onchange="filterProducts()">
+                                <option value="default">Default</option>
+                                <option value="az">Name: A-Z</option>
+                                <option value="za">Name: Z-A</option>
+                            </select>
+                            <label for="colourFilter">Colour</label>
+                            <select id="colourFilter" onchange="filterProducts()">
+                                <option value="">All colours</option>
+                            </select>
+                        </div>
+                    </details>
+                </div>
+            </div>
+                
+            <!-- 1. 风扇分类 -->
+            <details class="category-box" open>
+                <summary class="category-header">Alpha Fan</summary>
+                
+                <div class="brand-group">
+                    <details class="brand-box" open>
+                        <summary class="brand-header">Alkova Series</summary>
+                        <div class="product-grid">
+                            <div>
+                                <img src="Images/Alkova5.png" alt="Alkova ESTELL 56">
+                                <h4>Alkova ESTELL-5B/56</h4>
+                                <p>Colour: Matt White / Matt Black / Dark Koa</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova2.png" alt="Alkova ESTELL 46">
+                                <h4>Alkova ESTELL-5B/46</h4>
+                                <p>Colour: Matt White / Matt Black / Dark Koa</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova6.png" alt="Alkova ESTELL 38">
+                                <h4>Alkova ESTELL-5B/38</h4>
+                                <p>Colour: Matt White / Matt Black / Dark Koa</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova1.png" alt="Alkova MILI 33">
+                                <h4>Alkova MILI HG-3B/33</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova7.png" alt="Alkova MILI 42">
+                                <h4>Alkova MILI HG-3B/42</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova8.png" alt="Alkova MILI 52">
+                                <h4>Alkova MILI HG-3B/52</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova9.png" alt="Alkova Amax7 62">
+                                <h4>Alkova AMAX7-7B/62</h4>
+                                <p>Colour: Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova3.png" alt="Alkova Amax7 72">
+                                <h4>Alkova Amax7-7B/72</h4>
+                                <p>Colour: Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova10.png" alt="Alkova SUR 108">
+                                <h4>Alkova SUR G2-7B/108</h4>
+                                <p>Colour: Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova11.png" alt="Alkova MILI 52">
+                                <h4>Alkova MILI HG-3B/52 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova12.png" alt="Alkova MILI 42">
+                                <h4>Alkova MILI HG-3B/42 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova13.png" alt="Alkova MILI 33">
+                                <h4>Alkova MILI HG-3B/33 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova14.png" alt="Alkova KOKO 40">
+                                <h4>Alkova KOKO G2 HG-3B/40</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Caramel</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova15.png" alt="Alkova KOKO 56">
+                                <h4>Alkova KOKO G2 HG-3B/56</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Caramel</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova16.png" alt="Alkova MONTI 72">
+                                <h4>Alkova MONTI - 3B/72</h4>
+                                <p>Colour: Matt Black / Caramel</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova17.png" alt="Alkova KOKO 40">
+                                <h4>Alkova KOKO G2-3B/40</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Caramel</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova18.png" alt="Alkova KOKO 56">
+                                <h4>Alkova KOKO G2-3B/56</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Caramel</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova19.png" alt="Alkova SUR 72">
+                                <h4>Alkova SUR G2-7B/72</h4>
+                                <p>Colour: Matt Black / ORB</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova20.png" alt="Alkova SUR 84">
+                                <h4>Alkova SUR G2-7B/84</h4>
+                                <p>Colour: Matt Black / ORB</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova21.png" alt="Alkova SUR 96">
+                                <h4>Alkova SUR G2-7B/96</h4>
+                                <p>Colour: Matt Black / ORB</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova22.png" alt="Alkova MAYSA 56">
+                                <h4>Alkova MAYSA G2-3B/56</h4>
+                                <p>Colour: Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova23.png" alt="Alkova MAYSA 72">
+                                <h4>Alkova MAYSA G2-3B/72</h4>
+                                <p>Colour: Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova24.png" alt="Alkova MAYSA 84">
+                                <h4>Alkova MAYSA G2-3B/84</h4>
+                                <p>Colour: Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova25.png" alt="Alkova AMAZE 66">
+                                <h4>Alkova AMAZE-5B/66</h4>
+                                <p>Colour: Matt White / Matt Black</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova26.png" alt="Alkova KONA 16">
+                                <h4>Alkova KONA W-3B/16</h4>
+                                <p>Colour: Matt White / Matt Black / Maple / Walnut / Rose Gold / Majestic Gold</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova27.png" alt="Alkova MILI 22">
+                                <h4>Alkova MILI-3B/22 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Maple / Walnut </p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova28.png" alt="Alkova MILI 42">
+                                <h4>Alkova MILI-3B/42 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Maple / Walnut </p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova29.png" alt="Alkova MILI 52">
+                                <h4>Alkova MILI-3B/52 </h4>
+                                <p>Colour: Matt White / Matt Black / Maple / Walnut </p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova30.png" alt="Alkova PAZION 56">
+                                <h4>Alkova PAZION G2 HG-5B/56 </h4>
+                                <p>Colour: Matt White / Matt Black </p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova31.png" alt="Alkova PAZION 46">
+                                <h4>Alkova PAZION G2 HG-5B/46 </h4>
+                                <p>Colour: Matt White / Matt Black </p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova32.png" alt="Alkova PAZION 40">
+                                <h4>Alkova PAZION G2 HG-5B/40 </h4>
+                                <p>Colour: Matt White / Matt Black </p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova33.png" alt="Alkova PAZION 56">
+                                <h4>Alkova PAZION G2 HG-5B/56 LED </h4>
+                                <p>Colour: Matt White / Matt Black </p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova34.png" alt="Alkova PAZION 46">
+                                <h4>Alkova PAZION G2 HG-5B/46 LED </h4>
+                                <p>Colour: Matt White / Matt Black </p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova35.png" alt="Alkova PAZION 40">
+                                <h4>Alkova PAZION G2 HG-5B/40 LED </h4>
+                                <p>Colour: Matt White / Matt Black </p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova36.png" alt="Alkova PAZION 48">
+                                <h4>Alkova RACER-5B/48</h4>
+                                <p>Colour: Matt White / Matt Black </p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova37.png" alt="Alkova KONA 16">
+                                <h4>Alkova KONA-3B/16</h4>
+                                <p>Colour: Colour: Matt White / Matt Black / Maple / Walnut / Rose Gold / Majestic Gold</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova38.png" alt="Alkova RACER 60">
+                                <h4>Alkova RACER-5B/60</h4>
+                                <p>Colour: Matt White / Matt Black </p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova39.png" alt="Alkova Axis 56">
+                                <h4>Alkova Axis-5B/56 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Oak / Grey Wood</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova42.png" alt="Alkova Axis 42">
+                                <h4>Alkova Axis-5B/42 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Oak / Grey Wood</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova40.png" alt="Alkova Mili 33">
+                                <h4>Alkova MILI-3B/33 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Maple</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova41.png" alt="Alkova Mili 33">
+                                <h4>Alkova MILI-3B/33</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Maple</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova43.png" alt="Alkova PAZION 46">
+                                <h4>Alkova PAZION G2-5B/46 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Maple</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova44.png" alt="Alkova PAZION 46">
+                                <h4>Alkova PAZION G2-5B/46</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Maple</p>
+                            </div>
+                            <div>
+                                <img src="Images/Alkova4.png" alt="Alkova Axis 56">
+                                <h4>Alkova Axis-3B/56</h4>
+                                <p>Colour: Matt White / Matt Black</p>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="brand-box">
+                        <summary class="brand-header">Vannus Series</summary>
+                        <div class="product-grid">
+                            <div>
+                                <img src="Images/Vannus5.png" alt="Vannus SENI 56">
+                                <h4>Vannus SENI-5B/56</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus6.png" alt="Vannus SENI 56">
+                                <h4>Vannus SENI-5B/40</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus7.png" alt="Vannus TORA 62">
+                                <h4>Vannus TORA-7B/62</h4>
+                                <p>Colour: Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus8.png" alt="Vannus TORA 72">
+                                <h4>Vannus TORA-7B/72</h4>
+                                <p>Colour: Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus9.png" alt="Vannus VISTA 60">
+                                <h4>Vannus VISTA-8B/60 LED</h4>
+                                <p>Colour: Matt Black / Steel Grey / Dark Koa</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus1.png" alt="Vannus HARU 56">
+                                <h4>Vannus HARU-3B/56</h4>
+                                <p>Colour: Matt White / Matt black / Walnut / Chestnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus10.png" alt="Vannus HARU 40">
+                                <h4>Vannus HARU-3B/40</h4>
+                                <p>Colour: Matt White / Matt black / Walnut / Chestnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus2.png" alt="Vannus PRISTI 40">
+                                <h4>Vannus PRISTI-5B/40 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus11.png" alt="Vannus PRISTI 46">
+                                <h4>Vannus PRISTI-5B/46 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus12.png" alt="Vannus PRISTI 52">
+                                <h4>Vannus PRISTI-5B/52 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus13.png" alt="Vannus PRISTI 56">
+                                <h4>Vannus PRISTI-5B/56 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus14.png" alt="Vannus PRISTI 40">
+                                <h4>Vannus PRISTI-5B/40 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus15.png" alt="Vannus PRISTI 46">
+                                <h4>Vannus PRISTI-5B/46 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus16.png" alt="Vannus PRISTI 52">
+                                <h4>Vannus PRISTI-5B/52 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus17.png" alt="Vannus PRISTI 56">
+                                <h4>Vannus PRISTI-5B/56 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus18.png" alt="Vannus V3 52">
+                                <h4>Vannus V3-3B/52 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus19.png" alt="Vannus V3 46">
+                                <h4>Vannus V3-3B/46 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus20.png" alt="Vannus V3 40">
+                                <h4>Vannus V3-3B/40 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus21.png" alt="Vannus V3 52">
+                                <h4>Vannus V3-3B/52 </h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus22.png" alt="Vannus V3 46">
+                                <h4>Vannus V3-3B/46 </h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus23.png" alt="Vannus V3 40">
+                                <h4>Vannus V3-3B/40 </h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus24.png" alt="Vannus V3 28">
+                                <h4>Vannus V3-3B/28 </h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus25.png" alt="Vannus Iriz 40">
+                                <h4>Vannus Iriz-5B/40</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus3.png" alt="Vannus Iriz 40">
+                                <h4>Vannus Iriz-5B/40 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus26.png" alt="Vannus Iriz 56">
+                                <h4>Vannus Iriz-5B/56 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus4.png" alt="Vannus Iriz 56">
+                                <h4>Vannus Iriz-5B/56</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus27.png" alt="Vannus LUNA 60">
+                                <h4>Vannus LUNA-5B/60 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Maple</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus28.png" alt="Vannus LUNA 60">
+                                <h4>Vannus LUNA-5B/60</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Maple</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus29.png" alt="Vannus LUNA 56">
+                                <h4>Vannus LUNA-5B/56</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Maple</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus30.png" alt="Vannus LUNA 36">
+                                <h4>Vannus LUNA-5B/36</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Maple</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus31.png" alt="Vannus LUNA 36">
+                                <h4>Vannus LUNA-5B/36</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Maple</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus32.png" alt="Vannus LUNA 40">
+                                <h4>Vannus LUNA-5B/40</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Maple</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus33.png" alt="Vannus VC3 52">
+                                <h4>Vannus VC3-3B/52</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus34.png" alt="Vannus VC3 52">
+                                <h4>Vannus VC3-3B/52 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus35.png" alt="Vannus VC3 52">
+                                <h4>Vannus VC3-3B/52 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus36.png" alt="Vannus VC3 52">
+                                <h4>Vannus VC3-3B/52</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus37.png" alt="Vannus Luna 46">
+                                <h4>Vannus LUNA-5B/46</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Maple</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus38.png" alt="Vannus Luna 46">
+                                <h4>Vannus LUNA-5B/56 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Maple</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus39.png" alt="Vannus Luna 46">
+                                <h4>Vannus LUNA-5B/46 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Maple</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus40.png" alt="Vannus Luna 46">
+                                <h4>Vannus LUNA-5B/40 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Maple</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus41.png" alt="Vannus KS1 60">
+                                <h4>Vannus LUNA-5B/40 LED</h4>
+                                <p>Colour: Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Vannus41.png" alt="Vannus KS1 60">
+                                <h4>Vannus KS1-3B/60</h4>
+                                <p>Colour: Walnut</p>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="brand-box">
+                        <summary class="brand-header">Cosa Series</summary>
+                        <div class="product-grid">
+                            <div>
+                                <img src="Images/Cosa1.png" alt="Cosa EX6 40">
+                                <h4>Cosa EX6-5B/40</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Maple</p>
+                            </div>
+                            <div>
+                                <img src="Images/Cosa4.png" alt="Cosa EX6 40">
+                                <h4>Cosa EX6-5B/40 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Maple</p>
+                            </div>
+                            <div>
+                                <img src="Images/Cosa5.png" alt="Cosa EX6 46">
+                                <h4>Cosa EX6-5B/46</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Maple</p>
+                            </div>
+                            <div>   
+                                <img src="Images/Cosa6.png" alt="Cosa EX6 46">
+                                <h4>Cosa EX6-5B/46 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Maple</p>
+                            </div>
+                            <div>
+                                <img src="Images/Cosa7.png" alt="Cosa EX6 56">
+                                <h4>Cosa EX6-5B/56</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Maple</p>
+                            </div>
+                            <div>
+                                <img src="Images/Cosa8.png" alt="Cosa EX6 56">
+                                <h4>Cosa EX6-5B/56 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Maple</p>
+                            </div>
+                            <div>
+                                <img src="Images/Cosa9.png" alt="Cosa CX20 56">
+                                <h4>Cosa CX20-5B/56 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Maple</p>
+                            </div>
+                            <div>
+                                <img src="Images/Cosa10.png" alt="Cosa CX20 46">
+                                <h4>Cosa CX20-5B/46 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Maple</p>
+                            </div>
+                            <div>
+                                <img src="Images/Cosa11.png" alt="Cosa CX20 40">
+                                <h4>Cosa CX20-5B/40 LED</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Maple</p>
+                            </div>
+                            <div>
+                                <img src="Images/Cosa12.png" alt="Cosa CX20 40">
+                                <h4>Cosa CX20-5B/40 </h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Maple</p>
+                            </div>
+                            <div>
+                                <img src="Images/Cosa13.png" alt="Cosa CX20 46">
+                                <h4>Cosa CX20-5B/46 </h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Maple</p>
+                            </div>
+                            <div>
+                                <img src="Images/Cosa14.png" alt="Cosa CX20 56">
+                                <h4>Cosa CX20-5B/56</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut / Maple</p>
+                            </div>
+                            <div>
+                                <img src="Images/Cosa15.png" alt="Cosa CX10 46">
+                                <h4>Cosa CX10-5B/46</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut </p>
+                            </div>
+                            <div>
+                                <img src="Images/Cosa16.png" alt="Cosa EX9 46">
+                                <h4>Cosa EX9-5B/46</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Cosa17.png" alt="Cosa CX10 40">
+                                <h4>Cosa CX10-5B/40</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Cosa2.png" alt="Cosa CX10 56">
+                                <h4>Cosa CX10-5B/56</h4>
+                                <p>Colour: Walnut / Matt Black</p>
+                            </div>
+                            <div>
+                                <img src="Images/Cosa18.png" alt="Cosa EX9 40">
+                                <h4>Cosa EX9-5B/40</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Cosa19.png" alt="Cosa EX9 56">
+                                <h4>Cosa EX9-5B/56</h4>
+                                <p>Colour: Matt White / Matt Black / Walnut</p>
+                            </div>
+                            <div>
+                                <img src="Images/Cosa3.png" alt="Cosa CX998 56">
+                                <h4>Cosa CX998/56</h4>
+                                <p>Colour: Walnut / Matt Black</p>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </details>
+
+            <!-- 2. 灯具分类 -->
+            <details class="category-box">
+                <summary class="category-header">Lighting & Lamps</summary>
+                <div class="brand-group">
+                    <!-- 一级折叠：Philips Series -->
+                    <details class="brand-box" open>
+                        <summary class="brand-header">Philips Series</summary>
+                        <div class="brand-content">
+                            <!-- 二级折叠：Ceiling Light（完全匹配截图样式） -->
+                            <details class="sub-brand-box" open>
+                                <summary class="sub-brand-header">Ceiling Light</summary>
+                                <div class="product-grid">
+                                    <div>
+                                        <img src="Images/Philips1.png" alt="Philips Ceiling Light">
+                                        <h4>Ceiling Light, 1,800 lm</h4>
+                                        <p>Coloured and Tunable White Light</p>
+                                    </div>
+                                    <div>
+                                        <img src="Images/Philips2.png" alt="Philips Ceiling Light">
+                                        <h4>Ceiling Light 20W</h4>
+                                        <p>6500K</p>
+                                    </div>
+                                    <div>
+                                        <img src="Images/Philips3.png" alt="Philips Ceiling Light">
+                                        <h4>Moire Ceiling Light 17W</h4>
+                                        <p>6500K</p>
+                                    </div>
+                                    <div>
+                                        <img src="Images/Philips4.png" alt="Philips Ceiling Light">
+                                        <h4>Downlight </h4>
+                                        <p>3000K</p>
+                                    </div>
+                                    <div>
+                                        <img src="Images/Philips5.png" alt="Philips Ceiling Light">
+                                        <h4>Ceiling Light 16W </h4>
+                                        <p>3000K/4000K/4300k/6500k</p>
+                                    </div>
+                                    <div>
+                                        <img src="Images/Philips5.png" alt="Philips Ceiling Light">
+                                        <h4>Ceiling Light 24W </h4>
+                                        <p>3000K/4000k/6500k</p>
+                                    </div>
+                                    <div>
+                                        <img src="Images/Philips7.png" alt="Philips Ceiling Light">
+                                        <h4>Twirly Ceiling Light 12W</h4>
+                                        <p>6500k</p>
+                                    </div>
+                                    <div>
+                                        <img src="Images/Philips7.png" alt="Philips Ceiling Light">
+                                        <h4>Twirly Ceiling Light 17W</h4>
+                                        <p>6500k</p>
+                                    </div>
+                                    <div>
+                                        <img src="Images/Philips7.png" alt="Philips Ceiling Light">
+                                        <h4>Twirly Ceiling Light 20W</h4>
+                                        <p>6500k</p>
+                                    </div>
+                                    <div>
+                                        <img src="Images/Philips8.png" alt="Philips Ceiling Light">
+                                        <h4>Eridani Recessed Light</h4>
+                                        <p>3000k/4000k/6500k</p>
+                                    </div>
+                                </div>
+                            </details>
+                        </div>
+                    </details>
+                </div>
+            </details>
+
+            <!-- 3. 电线与配件分类 -->
+            <details class="category-box">
+                <summary class="category-header">Cables & Accessories</summary>
+                <div class="brand-group">
+                    <details class="brand-box">
+                        <summary class="brand-header">Standard Cables</summary>
+                        <div class="product-grid">
+                            <div>
+                                <img src="Images/wire1.png" alt="Electric Wire">
+                                <h4>Copper Electric Cable</h4>
+                                <p>High Performance Insulated Wire</p>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+        </section>
+    </main>
+
+
+
+    <footer id="Contact">
+        <div class="footer-container">
+            <!-- 第 1 列：公司名称与简介 -->
+            <div class="footer-col brand-col">
+                <h2>Syarikat Perniagaan Elektrik Berdikari Sdn Bhd</h2>
+                <p>Providing a wide range of premium, high-quality electrical appliances, lighting, and wiring solutions for homes and businesses.</p>
+            </div>
+
+            <!-- 第 2 列：Navigation 快速跳转 -->
+            <div class="footer-col nav-col">
+                <h3>NAVIGATION</h3>
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#Products">Products</a></li>
+                    <li><a href="T1.contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- 第 3 列：Contact Us 详细联系方式与营业时间 -->
+            <div class="footer-col contact-col">
+                <h3>Contact Us</h3>
+                <p class="address">
+                    <a href="https://maps.app.goo.gl/Ny2NhV4pxEJUjrRB9" target="_blank">
+                        No. 70, Jalan Pasar, Pudu, 55100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur
+                    </a>
+                </p>
+                
+                <div class="business-hours">
+                    <p><strong>Monday – Saturday:</strong> 08:30 – 18:00</p>
+                    <p><strong>Sunday:</strong> 08:30 - 14:30</p>
+                </div>
+
+                <p class="contact-info"><strong>Phone:</strong> <a href="tel:+60173669886">+60173669886</a></p>
+                <p class="contact-info"><strong>Email:</strong> <a href="mailto:boonloong73@gmail.com">boonloong73@gmail.com</a></p>
+            </div>
+
+            <!-- 第 4 列：Google 地图嵌入框（已更新最新地址链接） -->
+            <div class="footer-col map-col">
+                <div class="map-box">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3786.728904416986!2d101.71343177473027!3d3.1352769968401804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc36230d4f0875%3A0x4d021119e226f206!2z56uL5qOu6Zu75Zmo6LK_5piT5pyJ6ZmQ5YWs5Y-4!5e1!3m2!1szh-CN!2smy!4v1788963482483!5m2!1szh-CN!2smy"
+                        width="100%" 
+                        height="240" 
+                        style="border:0; border-radius: 12px;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-content">
+            <hr class="footer-divider" />
+            <p class="copyright-text">
+            Copyright @2026 by Syarikat Perniagaan Elektrik Berdikari Sdn Bhd 198801004515 (171873-U)
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
